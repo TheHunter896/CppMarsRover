@@ -2,7 +2,7 @@
 #include <iostream>
 
 Exit::Exit(int x, int y)
-	:Tile{ x, y, 'e' } {
+	:Tile{ x, y, 'e', false} {
 	std::cout << "Intialized exit at " << x << ' ' << y << std::endl;
 }
 

@@ -1,8 +1,9 @@
-#include "Map.h"
 #include <iostream>
 #include <math.h>
 #include <random>
 #include <vector>
+
+#include "Map.h"
 #include "Rock.h"
 #include "Tile.h"
 #include "Entrance.h"
@@ -19,10 +20,6 @@ Map::Map()
 		}
 		std::cout << "Initialized an empty map" << std::endl;
 		//Initialize entrace/exit
-		entrance.push_back(0);
-		entrance.push_back(0);
-		exit.push_back(0);
-		exit.push_back(0);
 		status = "Empty";
 }
 
@@ -68,9 +65,25 @@ Map::Map(int x, int y, bool complex)
 	tiles[exit_x][exit_y] = exit;
 
 	std::cout << "Initialized a map of " << x << ' ' << y;
-
+	status = "Filled";
 }
 
 Map::~Map() {
 	std::cout << "Destructing map" << std::endl;
+}
+
+void Map::Display() {
+	for (int i = 0; i < tiles.size(); i++) {
+		for (int j = 0; j < tiles.size(); j++) {
+			Tile current_tile = tiles[i][j];
+			
+			if (current_tile.y == tiles.size() - 1) {
+				std::cout << current_tile.value << std::endl;
+			}
+			else {
+				std::cout << current_tile.value;
+			}
+
+		}
+	}
 }

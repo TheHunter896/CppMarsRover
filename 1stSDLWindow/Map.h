@@ -14,7 +14,7 @@ private:
 public:
 	int x { 0 };
 	int y { 0 };
-	std::vector<std::vector<Tile>> tiles;
+	std::vector<std::vector<Tile>> tiles { {} };
 
 
 	Map();

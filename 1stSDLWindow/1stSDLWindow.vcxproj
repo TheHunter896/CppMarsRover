@@ -152,6 +152,8 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MarsRover.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Rock.cpp" />
     <ClCompile Include="Tile.cpp" />
   </ItemGroup>
@@ -160,6 +162,8 @@
     <ClInclude Include="Exit.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="MarsRover.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Rock.h" />
     <ClInclude Include="Tile.h" />
   </ItemGroup>

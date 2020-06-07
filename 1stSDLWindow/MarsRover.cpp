@@ -8,6 +8,15 @@ MarsRover::~MarsRover() {
 
 }
 
+bool MarsRover::check_win(const Map& map, int x, int y) {
+	if (map.tiles[x][y].win) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
 void MarsRover::action(std::string action, Map &map) {
 	if (action == "up") {
 		move_up(map);
@@ -21,9 +30,10 @@ void MarsRover::action(std::string action, Map &map) {
 	else if (action == "right") {
 		move_right(map);
 	}
+	check_win(map, x, y);
 }
 
-bool MarsRover::check_action(Map& map, int x, int y) {
+bool MarsRover::check_action(const Map& map, int x, int y) {
 	//Check map limits
 	if (y < 0 || y > map.y) {
 		std::cout << "Cannot move in that direction" << std::endl;

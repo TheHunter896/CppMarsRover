@@ -10,7 +10,8 @@ private:
 	void move_down(Map& map);
 	void move_left(Map& map);
 	void move_right(Map& map);
-	bool check_action(Map& map, int x, int y);
+	bool check_action(const Map& map, int x, int y);
+	bool check_win(const Map& map, int x, int y);
 
 public:
 	int x;
